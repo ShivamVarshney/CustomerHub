@@ -30,7 +30,10 @@ try {
 
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+  credentials: true
+}));
 
 const authRoutes = require("./Routes/authRoutes.js");
 const customerRoutes = require("./Routes/customerRoutes.js");
