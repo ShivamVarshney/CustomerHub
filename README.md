@@ -1,37 +1,37 @@
 # CustomerHub — Customer Management System
 
-CustomerHub is a full-stack Customer Relationship Management (CRM) application built using the MERN stack. It helps users manage customer information, track customer status and lead stages, view dashboard analytics, and organize customer data through workspaces.
+CustomerHub is a full-stack Customer Relationship Management (CRM) application built using the MERN stack. It helps users manage customer records, track lead stages, analyze customer activity, and organize data using workspaces.
 
 ## Features
 
-- **User Authentication:** Secure registration and login.
+- **User Authentication:** Secure user registration and login.
 - **Customer Management:** Create, view, update, and delete customer records.
 - **Dashboard:** View total, active, pending, and inactive customers, along with recent customer activity.
 - **Analytics:** Analyze customer data using date ranges and monthly summaries.
-- **Search and Filters:** Search customers by name, company, email, or phone number and filter by status or lead stage.
+- **Search and Filters:** Search by customer name, company, email, or phone number and filter by account status or lead stage.
 - **Lead Management:** Track lead stages separately from customer account status.
 - **Workspace Management:** Create and switch between workspaces with workspace-specific customer data.
-- **International Phone Input:** Select country codes when entering phone numbers.
-- **Data Export:** Export customer data in CSV, Excel, and PDF formats, with options for selected records and columns.
+- **International Phone Input:** Select international country calling codes when entering phone numbers.
+- **Data Export:** Export customer data to CSV, Excel, and PDF, with options for selected records and columns.
 - **Theme Customization:** Choose light, dark, or system appearance and customize the accent color.
-- **Responsive UI:** Designed to work across desktop and mobile screen sizes.
+- **Responsive UI:** Designed for desktop and mobile screen sizes.
 
 ## Tech Stack
 
-**Frontend**
+### Frontend
 - React
 - Vite
 - JavaScript
 - CSS
 
-**Backend**
+### Backend
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
 - JSON Web Tokens (JWT)
 
-**Tools and Libraries**
+### Tools and Libraries
 - Git and GitHub
 - npm
 - REST APIs
@@ -39,7 +39,7 @@ CustomerHub is a full-stack Customer Relationship Management (CRM) application b
 ## Project Structure
 
 ```text
-Assignment/
+CustomerHub/
 ├── Backend/
 │   ├── Controllers/
 │   ├── Middleware/
@@ -58,6 +58,8 @@ Assignment/
 └── README.md
 ```
 
+*Note: The structure above highlights the main project folders. Your repository may contain additional files and directories.*
+
 ## Getting Started
 
 ### Prerequisites
@@ -69,32 +71,40 @@ Assignment/
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd Assignment
+git clone https://github.com/ShivamVarshney/CustomerHub.git
+cd CustomerHub
 ```
-
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository URL.
 
 ### 2. Configure Environment Variables
 
-Create the required `.env` files using the provided `.env.example` templates in the backend and frontend folders.
+Create the required `.env` files using the provided `.env.example` templates.
 
-Add your own database connection string, authentication secret, and other required configuration values according to the application's code.
+Configure the values required by your application, such as:
 
-**Important:** Never commit actual `.env` files, database credentials, or authentication secrets to GitHub.
+- MongoDB connection string
+- JWT secret
+- Backend port
+- Frontend API URL
+- Allowed frontend origins for CORS
 
-### 3. Install Backend Dependencies
+Use the variable names specified in the respective `.env.example` files and application code.
+
+**Security:** Never commit actual `.env` files, database credentials, JWT secrets, or other sensitive information to GitHub.
+
+### 3. Install and Run the Backend
+
+Open a terminal:
 
 ```bash
 cd Backend
 npm install
 ```
 
-Start the backend using the script configured in `Backend/package.json`.
+Configure the backend environment variables, then run the start command defined in `Backend/package.json`.
 
-### 4. Install Frontend Dependencies
+### 4. Install and Run the Frontend
 
-Open a separate terminal:
+Open a separate terminal from the project root:
 
 ```bash
 cd Frontend
@@ -106,7 +116,7 @@ Open the local URL displayed by Vite in your terminal.
 
 ## API Overview
 
-The backend provides REST API endpoints for:
+The backend provides REST API functionality for:
 
 - Authentication
 - Customer management
@@ -114,21 +124,21 @@ The backend provides REST API endpoints for:
 - Analytics
 - Workspace management
 
-Refer to the backend routes for the exact endpoint paths and supported HTTP methods.
+Refer to the backend route files for the exact endpoints, request formats, and supported HTTP methods.
 
 ## Security and Data Isolation
 
 - Protected routes require authentication.
-- Customer data is scoped to the authorized user and workspace.
-- Environment variables are used for sensitive configuration.
+- Customer records are scoped to the authorized user and workspace.
+- Sensitive configuration is managed through environment variables.
 - Backend validation and authorization help prevent unauthorized access to customer records.
 
 ## Future Improvements
 
-- Automated deployment and CI/CD.
-- Additional analytics and reporting.
-- Email notifications through an email service provider.
 - Expanded automated integration and end-to-end testing.
+- Additional analytics and reporting.
+- Email notifications through an email service.
+- Further improvements to deployment automation and CI/CD.
 
 ## Author
 
@@ -136,6 +146,6 @@ Refer to the backend routes for the exact endpoint paths and supported HTTP meth
 
 GitHub: [ShivamVarshney](https://github.com/ShivamVarshney)
 
----
+## Project Purpose
 
-This project was developed to demonstrate full-stack web development skills, REST API integration, authentication, database management, responsive UI design, and workspace-based data organization.
+CustomerHub demonstrates full-stack web development skills, REST API integration, authentication, database management, responsive UI design, customer analytics, and workspace-based data organization.
